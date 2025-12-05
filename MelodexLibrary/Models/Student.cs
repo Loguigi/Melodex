@@ -8,5 +8,5 @@ public class Student
     [MaxLength(25)] public string Name { get; set; } = string.Empty;
     public int ClassId { get; set; }
     public Class Class { get; set; } = null!;
-    public List<Intervention> Interventions { get; set; } = null!;
+    public List<StudentInterventionResponse> InterventionResponses { get; set; } = null!;
 }

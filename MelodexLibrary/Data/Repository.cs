@@ -21,6 +21,11 @@ public class Repository<T>(MelodexDbContext context) : IDataRepository<T> where 
         return await query.ToListAsync();
     }
 
+    public Task<List<T>> GetFilteredAsync(Func<IQueryable<T>, IQueryable<T>> filter, Func<IQueryable<T>, IIncludableQueryable<T, object>>? includes = null)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task CreateAsync(T item)
     {
         await _dbSet.AddAsync(item);
